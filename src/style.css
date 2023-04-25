@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Open+Sans:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --white-color: #fff;
+  --gray-color: #c1cad6;
+  --dark-color: #344357;
+  --red-color: #ff1053;
+  --sent-blue: #66c7f4;
+  --received-blue: #6c6ea0;
+}
+
+body {
+  background-color: var(--gray-color);
+  font-family: "Open Sans", "Montserrat", sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 100vh;
+}
+.app__container {
+  width: 728px;
+  height: 90vh;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.2);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red-color);
+  top: 0;
+  height: 6vh;
+  min-height: 50px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 12px 12px 0 0;
+  z-index: 99;
+}
+.nav__signOut {
+  display: flex;
+}
+.nav__currentUser {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #fff;
+}
+.nav__dp {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 2px 7px;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--dark-color);
+  height: 100%;
+  border-radius: 12px;
+}
+
+.chatRoom {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.chatRoom::-webkit-scrollbar {
+  width: 0.25rem;
+}
+.chatRoom::-webkit-scrollbar-track {
+  background: var(--dark-color);
+}
+.chatRoom::-webkit-scrollbar-thumb {
+  background: rgba(255, 16, 83, 0.4);
+}
+.chatRoom__form {
+  width: 100%;
+  max-width: 728px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  display: flex;
+}
+.chatRoom__input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: var(--dark-color);
+  color: white;
+  outline: none;
+  border: 1px solid var(--gray-color);
+  padding: 0 10px;
+  margin: 0 20px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+.chatRoom__input:focus {
+  border: 1px solid var(--red-color);
+}
+.chatRoom__button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 20%;
+  background-color: var(--red-color);
+  margin-right: 20px;
+  padding: 4px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 2rem;
+  transition: 0.2s ease;
+}
+.chatRoom__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.chatMessage {
+  display: flex;
+}
+.chatMessage__text {
+  max-width: 500px;
+  margin-bottom: 20px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.chatMessage__dp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+.chatMessage__sent {
+  flex-direction: row-reverse;
+}
+.chatMessage__sent .chatMessage__text {
+  color: white;
+  background: var(--sent-blue);
+  align-self: flex-end;
+}
+.chatMessage__received .chatMessage__text {
+  color: white;
+  background: var(--received-blue);
+}
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-color);
+  height: 100%;
+  border-radius: 12px;
+}
+.signIn__form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-width: 50%;
+}
+.signIn__form > input {
+  margin: 6px 0;
+  padding: 4px 8px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+/* .signIn__form > input:focus {
+  outline: 2px solid var(--red-color);
+} */
+.signIn__button {
+  width: 300px;
+  margin: 6px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--gray-color);
+  color: var(--dark-color);
+  font-family: "Open Sans", sans-serif;
+  transition: 0.2s ease;
+}
+.signIn__button:hover {
+  background-color: var(--red-color);
+  color: white;
+  scale: 1.06;
+}
+
+.signIn__signUp {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.signIn__signUp:hover {
+  color: var(--red-color);
+  text-decoration: underline;
+}
+
+.signUp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-color);
+  width: 728px;
+  height: 90vh;
+  border-radius: 12px;
+}
+.signUp__form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.signUp__form > input {
+  margin: 6px 0;
+  padding: 4px 8px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+.signUp__form > input:focus {
+  outline: 2px solid var(--red-color);
+}
+.signUp__button {
+  width: 300px;
+  margin: 6px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--gray-color);
+  color: var(--dark-color);
+  font-family: "Open Sans", sans-serif;
+  transition: 0.2s ease;
+}
+.signUp__button:hover {
+  background-color: var(--red-color);
+  color: white;
+  scale: 1.06;
+}
+.signUp__signIn {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.signUp__signIn:hover {
+  color: var(--red-color);
+  text-decoration: underline;
+}
+
+.signOut {
+  display: flex;
+  align-items: center;
+}
+.signOut__button {
+  border: none;
+  border-radius: 6px;
+  background-color: var(--dark-color);
+  opacity: 0.6;
+  color: white;
+  width: 70px;
+  height: 35px;
+  transition: 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+}
+.signOut__button:hover {
+  opacity: 1;
+}
+
+.users {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  max-width: 728px;
+  border-radius: 12px;
+}
+.users__list {
+  background-color: var(--dark-color);
+  width: 50%;
+  margin-top: 6vh;
+  height: 84vh;
+  border-radius: 0 0 0 12px;
+}
+.users__user {
+  display: flex;
+  align-items: center;
+  margin: 12px;
+}
+.users__userName {
+  color: #fff;
+  font-weight: 400;
+}
+.users__userDp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 4px 8px;
+}

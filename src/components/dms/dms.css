@@ -1,0 +1,41 @@
+.directMessages > h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  color: var(--white-color);
+}
+.directMessage__user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin: 4px 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.directMessage__user:hover {
+  background-color: var(--dark3);
+  border-radius: 10px;
+  margin: 4px 6px;
+}
+.directMessage__user > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.directMessage__info {
+  color: var(--white-color);
+}
+.directMessage__info > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.directMessage__info > p {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}

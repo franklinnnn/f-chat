@@ -1,0 +1,225 @@
+.rooms__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--white-color);
+}
+.rooms__header .MuiSvgIcon-root {
+  color: var(--gray-color);
+  transition: 0.3s ease;
+}
+.rooms__header .MuiSvgIcon-root:hover {
+  color: var(--white-color);
+  background-color: var(--dark3);
+  border-radius: 4px;
+}
+.room {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  margin: 4px 6px;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.room:hover {
+  color: var(--white-color);
+  background-color: var(--dark3);
+  border-radius: 10px;
+  margin: 4px 6px;
+}
+.room .room__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.room .room__info > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.room .room__info > span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.room__active {
+  background-color: var(--red-color);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 4px 6px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.room__active .room__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.room__active .room__info > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.room__active .room__info > span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.room__options {
+  color: var(--gray-color);
+  display: flex;
+  align-items: center;
+}
+.room__actions {
+  position: absolute;
+  background-color: var(--dark3);
+  color: var(--gray-color);
+  font-size: 12px;
+  padding: 0 3px;
+  margin-top: 20px;
+  margin-right: 6px;
+  right: 0;
+  width: 40%;
+  max-width: 200px;
+  box-shadow: 0px 4px 8px 0 var(--dark3);
+  border-radius: 4px;
+}
+.room__actions > ul {
+  list-style: none;
+}
+.room__actions > ul > li {
+  margin: 10px 0;
+  transition: 0.2s ease;
+  padding: 0 3px;
+}
+.room__actions > ul > li:hover {
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border-radius: 4px;
+}
+.addRoom {
+  position: absolute;
+  right: 0;
+  width: 20vw;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark3);
+  color: var(--white-color);
+  padding: 6px;
+  margin: 6px;
+  border-radius: 4px;
+  box-shadow: 5px 0 50px 0 rgba(0, 0, 0, 0.4);
+}
+.addRoom__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addRoom__header .MuiSvgIcon-root {
+  color: var(--gray-color);
+  transition: 0.3s ease;
+}
+.addRoom__header .MuiSvgIcon-root:hover {
+  color: var(--white-color);
+  background-color: var(--dark3);
+  border-radius: 4px;
+}
+.addRoom > form {
+  padding: 10px 0;
+}
+.addRoom > form > input {
+  width: 95%;
+  padding: 4px;
+  outline: 0;
+  border-radius: 4px;
+  color: var(--white-color);
+  background-color: var(--dark3);
+  border: 1px solid var(--dark2);
+}
+.addRoom > form input:focus {
+  border: 1px solid var(--red-color);
+}
+.addRoom > form > label {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  gap: 6px;
+  color: var(--gray-color);
+  transition: 0.3s ease;
+}
+.addRoom > form > label:hover {
+  color: var(--white-color);
+}
+.addRoom > form > button {
+  padding: 10px 15px;
+  border: 0;
+  background-color: var(--dark2);
+  color: var(--white-color);
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.addRoom > form > button:hover {
+  background-color: var(--red-color);
+}
+.editRoom {
+  position: absolute;
+  right: 0;
+  width: 20vw;
+  min-width: 200px;
+  margin: 0;
+}
+.editRoom > img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.editRoom__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.editRoom__buttons > button {
+  padding: 10px 15px;
+  border: 0;
+  background-color: var(--dark2);
+  color: var(--white-color);
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.editRoom__buttons > button:hover {
+  background-color: var(--red-color);
+}
+.deleteRoom {
+  position: absolute;
+  margin: 0;
+  width: 200px;
+  max-width: 400px;
+  gap: 10px;
+}
+.deleteRoom > span {
+  text-align: center;
+}
+.deleteRoom__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.deleteRoom__buttons > button {
+  padding: 10px 15px;
+  border: 0;
+  background-color: var(--dark2);
+  color: var(--white-color);
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.deleteRoom__buttons > button:hover {
+  background-color: var(--red-color);
+}
